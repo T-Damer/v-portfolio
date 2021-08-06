@@ -8,7 +8,9 @@
         HOME
       </div>
       <div class="nav__item">
-        Fresh
+        <router-link to="/fresh">
+          Fresh
+        </router-link>
       </div>
       <div class="nav__item">
         Creativity

@@ -3,7 +3,7 @@
   <Section
     msg="Hi, you found me! I am a front-end developer from Russia."
     subMsg="Currently working at Borodutch to build awesome things."
-    children="<div><p>Hi there</p></div>"
+    children="<div class='slide-fwd-center'><p>Hi there</p><img src='favicons/apple-touch-icon.png'/></div>"
   />
   <Footer />
 </template>
@@ -102,6 +102,46 @@ body {
 
 img {
   height: auto;
+}
+
+.slide-fwd-center:hover {
+  -webkit-animation: slide-fwd-center 0.45s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-fwd-center 0.45s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px);
+    transform: translateZ(160px);
+  }
+}
+@keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px);
+    transform: translateZ(160px);
+  }
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: var(--first-color);
+}
+
+.special-link:hover {
+  background-color: var(--first-color);
+  transform: translateX(1s);
 }
 
 #app {
