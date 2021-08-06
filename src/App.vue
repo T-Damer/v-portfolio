@@ -17,7 +17,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&display=swap');
 
 :root {
-  --hue-color: 291; /* Blue - 240, Green - 154, Orange - 25, Pink - 335 */
+  --hue-color: 291; /* Pink - 335, Blue - 240, Green - 154, Orange - 25 */
   --first-color: hsl(var(--hue-color), 53%, 49%);
   --title-color: hsl(var(--hue-color), 53%, 15%);
   --text-color: hsl(var(--hue-color), 12%, 35%);
