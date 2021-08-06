@@ -1,11 +1,17 @@
 <template>
   <nav class="nav__container">
     <div class="nav__logo">
-      <h1>VP 📟</h1>
+      <h1>
+        <router-link to="/">
+          VP 📟
+        </router-link>
+      </h1>
     </div>
     <div class="nav__items">
       <div class="nav__item">
-        HOME
+        <router-link to="/">
+          HOME
+        </router-link>
       </div>
       <div class="nav__item">
         <router-link to="/fresh">
@@ -13,7 +19,9 @@
         </router-link>
       </div>
       <div class="nav__item">
-        Creativity
+        <router-link to="/fresh">
+          Creativity
+        </router-link>
       </div>
     </div>
   </nav>
