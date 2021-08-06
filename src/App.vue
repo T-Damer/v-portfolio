@@ -1,14 +1,24 @@
 <template>
-  <Home msg="Welcome to v-portfolio" />
+  <Nav />
+  <Section
+    msg="Hi, you found me! I am a front-end developer from Russia."
+    subMsg="Currently working at Borodutch to build awesome things."
+    children="<div><p>Hi there</p></div>"
+  />
+  <Footer />
 </template>
 
 <script>
-import Home from './components/Home.vue'
+import Section from './components/Section.vue'
+import Nav from './components/Nav.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'VP 📟',
   components: {
-    Home,
+    Nav,
+    Section,
+    Footer,
   },
 }
 </script>
@@ -16,6 +26,7 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&display=swap');
 
+/* VARIABLES */
 :root {
   --hue-color: 291; /* Pink - 335, Blue - 240, Green - 154, Orange - 25 */
   --first-color: hsl(var(--hue-color), 53%, 49%);
@@ -30,15 +41,16 @@ export default {
 :root {
   --body-font: 'Lato', sans-serif;
   --big-font-size: 3rem;
+  --font-medium: 1.2rem;
   --small-font-size: 0.815rem;
   --smaller-font-size: 0.75rem;
   --tiny-font-size: 0.625rem;
-  --font-medium: 1.2rem;
 }
 
 @media screen and (min-width: 968px) {
   :root {
     --big-font-size: 3.5rem;
+    --font-medium: 1.5rem;
     --small-font-size: 0.875rem;
     --smaller-font-size: 0.815rem;
     --tiny-font-size: 0.75rem;
@@ -60,10 +72,25 @@ export default {
 
 /*===== Margin =====*/
 :root {
-  --mb-0-25: 0.25rem;
-  --mb-1: 1rem;
-  --mb-1-5: 1.5rem;
-  --mb-2-5: 2.5rem;
+  --m-0-25: 0.25rem;
+  --m-1: 1rem;
+  --m-1-5: 1.5rem;
+  --m-2-5: 2.5rem;
+}
+
+/*=== Scrollbar ===*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #646464;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--white-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #000;
 }
 
 body {
